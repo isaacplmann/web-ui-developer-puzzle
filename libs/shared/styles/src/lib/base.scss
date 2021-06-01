@@ -30,3 +30,7 @@ a {
     color: $pink-dark;
   }
 }
+
+.mat-flat-button.mat-primary:focus {
+  background-color: darken(#3f51b5, 20%);
+}
