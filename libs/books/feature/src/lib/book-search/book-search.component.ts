@@ -9,7 +9,7 @@ import {
 } from '@tmo/books/data-access';
 import { FormBuilder } from '@angular/forms';
 import { Book } from '@tmo/shared/models';
-import { tap } from 'rxjs/operators';
+import { debounce, debounceTime, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'tmo-book-search',
@@ -32,7 +32,14 @@ export class BookSearchComponent implements OnInit {
     return this.searchForm.value.term;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.searchForm.valueChanges
+      .pipe(
+        debounceTime(500),
+        map((formValues) => formValues.term)
+      )
+      .subscribe((term) => this.searchBooks(term));
+  }
 
   formatDate(date: void | string) {
     return date
@@ -46,12 +53,12 @@ export class BookSearchComponent implements OnInit {
 
   searchExample() {
     this.searchForm.controls.term.setValue('javascript');
-    this.searchBooks();
+    this.searchBooks('javascript');
   }
 
-  searchBooks() {
-    if (this.searchForm.value.term) {
-      this.store.dispatch(searchBooks({ term: this.searchTerm }));
+  searchBooks(term = this.searchTerm) {
+    if (term) {
+      this.store.dispatch(searchBooks({ term }));
     } else {
       this.store.dispatch(clearSearch());
     }
