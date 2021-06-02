@@ -12,6 +12,30 @@
       <div class="reading-list-item--details--author">
         {{ b.authors.join(',') }}
       </div>
+      <div class="reading-list-item--details--finished" *ngIf="b.finished">
+        Finished on {{ b.finishedDate | date }}
+      </div>
+    </div>
+    <div>
+      <button
+        *ngIf="!b.finished; else finishedIcon"
+        mat-icon-button
+        color="primary"
+        [attr.aria-label]="'Finish ' + b.title + ''"
+        (click)="finishBook(b)"
+      >
+        <mat-icon>assignment</mat-icon>
+      </button>
+      <ng-template #finishedIcon>
+        <button
+          disabled
+          mat-icon-button
+          color="primary"
+          [attr.aria-label]="b.title + ' finished'"
+        >
+          <mat-icon>assignment_turned_in</mat-icon>
+        </button>
+      </ng-template>
     </div>
     <div>
       <button
