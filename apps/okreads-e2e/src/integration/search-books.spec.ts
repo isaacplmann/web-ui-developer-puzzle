@@ -1,5 +1,9 @@
 describe('When: Use the search feature', () => {
   beforeEach(() => {
+    // Google API was flaky.  Adding this to get tests to pass
+    cy.intercept('/api/books/search?q=javascript', {
+      fixture: 'javascript-books.json',
+    });
     cy.startAt('/');
   });
 

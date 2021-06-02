@@ -1,0 +1,91 @@
+[
+  {
+    "id": "0oWMBAAAQBAJ",
+    "title": "JavaScript & JQuery: The Missing Manual",
+    "authors": ["David Sawyer McFarland"],
+    "description": "JavaScript lets you supercharge your web pages with animation, interactivity, and visual effects, but learning the language isn&#39;t easy.",
+    "publisher": "\"O'Reilly Media, Inc.\"",
+    "publishedDate": "2014-09-18T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=0oWMBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "id": "PXa2bby0oQ0C",
+    "title": "JavaScript: The Good Parts",
+    "authors": ["Douglas Crockford"],
+    "description": "If you develop sites or applications for the Web, this book is an absolute must.",
+    "publisher": "\"O'Reilly Media, Inc.\"",
+    "publishedDate": "2008-05-08T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=PXa2bby0oQ0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "id": "UAYvDwAAQBAJ",
+    "title": "Eloquent JavaScript",
+    "authors": ["Marijn Haverbeke"],
+    "description": "Eloquent JavaScript dives into this flourishing language and teaches you to write code that&#39;s beautiful and effective.",
+    "publisher": "No Starch Press",
+    "publishedDate": "2011-01-15T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=UAYvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "id": "aAMrswEACAAJ",
+    "title": "Javascript and Jquery",
+    "authors": ["Jon Duckett"],
+    "description": "I crafted this book to be used as my own personal reference point for jQuery concepts. This is exactly the type of book I wish every JavaScript library had available.",
+    "publisher": "Createspace Independent Publishing Platform",
+    "publishedDate": "2017-07-16T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=aAMrswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+  },
+  {
+    "id": "p1v6DwAAQBAJ",
+    "title": "Eloquent JavaScript",
+    "authors": ["Marijn Haverbeke"],
+    "description": "Diving deep into the JavaScript language to show you how to write beautiful, effective code, this book uses extensive examples and immerses you in code from the start, while exercises and full-chapter projects give you hands-on experience ...",
+    "publishedDate": "2018-11-15T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=p1v6DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "id": "qU3rAgAAQBAJ",
+    "title": "Speaking JavaScript",
+    "authors": ["Axel Rauschmayer"],
+    "description": "This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position. Speaking JavaScript helps you approach the language with four standalone sections.",
+    "publisher": "\"O'Reilly Media, Inc.\"",
+    "publishedDate": "2014-02-25T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=qU3rAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "id": "Nz9iAwAAQBAJ",
+    "title": "Effective JavaScript",
+    "authors": ["David Herman"],
+    "description": "Provides information on how to write better JavaScript programs, covering such topics as functions, arrays, library and API design, and concurrency.",
+    "publisher": "Pearson Education",
+    "publishedDate": "2013-01-01T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=Nz9iAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "id": "IS0EAwAAQBAJ",
+    "title": "You Don't Know JS: Scope & Closures",
+    "authors": ["Kyle Simpson"],
+    "description": "No matter how much experience you have with JavaScript, odds are you don’t fully understand the language.",
+    "publisher": "\"O'Reilly Media, Inc.\"",
+    "publishedDate": "2014-03-10T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=IS0EAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "id": "OgxlDwAAQBAJ",
+    "title": "Rediscovering JavaScript",
+    "authors": ["Venkat Subramaniam"],
+    "description": "Troublesome features have been replaced with better, elegant, more reliable alternatives. This book includes many practical examples and exercises to help you learn in depth.",
+    "publisher": "Pragmatic Bookshelf",
+    "publishedDate": "2018-06-11T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=OgxlDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  },
+  {
+    "id": "bzekBgAAQBAJ",
+    "title": "Beginning JavaScript",
+    "authors": ["Jeremy McPeak"],
+    "description": "The bestselling JavaScript guide, updated with current features and best practices Beginning JavaScript 5th Edition shows you how to work effectively with JavaScript frameworks, functions, and modern browsers, and teaches more effective ...",
+    "publisher": "John Wiley & Sons",
+    "publishedDate": "2015-02-17T00:00:00.000Z",
+    "coverUrl": "http://books.google.com/books/content?id=bzekBgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+  }
+]
