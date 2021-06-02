@@ -2,7 +2,6 @@ describe('When: I use the reading list feature', () => {
   const bookTitle = 'The Once & Future King';
   beforeEach(() => {
     cy.intercept('/api/reading-list', (req) => {
-      console.log(req.url);
       if (req.url.endsWith('/api/reading-list')) {
         return req.reply([
           {
@@ -27,7 +26,7 @@ describe('When: I use the reading list feature', () => {
     cy.startAt('/');
   });
 
-  xit('Then: I should see my reading list', () => {
+  it('Then: I should see my reading list', () => {
     cy.get('[data-testing="toggle-reading-list"]').click();
 
     cy.get('[data-testing="reading-list-container"]').should(
@@ -56,7 +55,7 @@ describe('When: I use the reading list feature', () => {
     cy.get('form').submit();
 
     cy.get('[data-testing="book-item"]')
-      .contains(bookTitle)
+      .should('contain', bookTitle)
       .should('contain', 'Finished');
   });
 });
