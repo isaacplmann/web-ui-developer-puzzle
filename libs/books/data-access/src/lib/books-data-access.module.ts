@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
+import { NgModule } from '@angular/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { EffectsModule } from '@ngrx/effects';
-import * as fromBooks from './+state/books.reducer';
+import { StoreModule } from '@ngrx/store';
 import { BooksEffects } from './+state/books.effects';
-import * as fromReadingList from './+state/reading-list.reducer';
+import * as fromBooks from './+state/books.reducer';
 import { ReadingListEffects } from './+state/reading-list.effects';
+import * as fromReadingList from './+state/reading-list.reducer';
+import { SnackBarEffects } from './+state/snack-bar.effects';
 
 @NgModule({
   imports: [
@@ -15,7 +17,12 @@ import { ReadingListEffects } from './+state/reading-list.effects';
       fromReadingList.READING_LIST_FEATURE_KEY,
       fromReadingList.reducer
     ),
-    EffectsModule.forFeature([BooksEffects, ReadingListEffects])
-  ]
+    MatSnackBarModule,
+    EffectsModule.forFeature([
+      BooksEffects,
+      ReadingListEffects,
+      SnackBarEffects,
+    ]),
+  ],
 })
 export class BooksDataAccessModule {}
