@@ -13,19 +13,37 @@ export class ReadingListService {
   }
 
   async addBook(b: Book): Promise<void> {
-    this.storage.update(list => {
+    this.storage.update((list) => {
       const { id, ...rest } = b;
       list.push({
         bookId: id,
-        ...rest
+        ...rest,
       });
       return list;
     });
   }
 
+  async finishBook(id: string): Promise<ReadingListItem> {
+    let foundItem;
+    this.storage.update((list) => {
+      return list.map((x) => {
+        if (x.bookId === id) {
+          foundItem = {
+            ...x,
+            finished: true,
+            finishedDate: new Date().toISOString(),
+          };
+          return foundItem;
+        }
+        return x;
+      });
+    });
+    return foundItem;
+  }
+
   async removeBook(id: string): Promise<void> {
-    this.storage.update(list => {
-      return list.filter(x => x.bookId !== id);
+    this.storage.update((list) => {
+      return list.filter((x) => x.bookId !== id);
     });
   }
 }
