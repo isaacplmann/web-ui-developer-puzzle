@@ -7,13 +7,13 @@
       placeholder="Search for books to add to your reading list"
       formControlName="term"
     />
-    <button mat-icon-button matSuffix aria-label="search">
+    <button mat-icon-button matSuffix>
       <mat-icon>search</mat-icon>
     </button>
   </mat-form-field>
 </form>
 
-<ng-container *ngIf="books$ | async as books; else empty">
+<ng-container *ngIf="searchTerm; else empty">
   <div class="book-grid">
     <div class="book" data-testing="book-item" *ngFor="let b of books">
       <div class="book--title">
@@ -21,7 +21,7 @@
       </div>
       <div class="book--content">
         <div class="book--content--cover">
-          <img src="{{ b.coverUrl }}" [alt]="'Cover for ' + b.title" />
+          <img src="{{ b.coverUrl }}" />
         </div>
         <div class="book--content--info">
           <div><strong>Author:</strong> {{ b.authors.join(',') }}</div>
