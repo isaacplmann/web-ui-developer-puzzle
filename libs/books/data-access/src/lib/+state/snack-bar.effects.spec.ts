@@ -1,22 +1,27 @@
 import { TestBed } from '@angular/core/testing';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { provideMockActions } from '@ngrx/effects/testing';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 import { SnackBarEffects } from './snack-bar.effects';
 
 describe('SnackBarEffects', () => {
-  let actions$: Observable<any>;
+  const actions$: Observable<any> = of();
   let effects: SnackBarEffects;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
         SnackBarEffects,
-        provideMockActions(() => actions$)
-      ]
+        provideMockActions(() => actions$),
+        {
+          provide: MatSnackBar,
+          useValue: {},
+        },
+      ],
     });
 
-    effects = TestBed.get<SnackBarEffects>(SnackBarEffects);
+    effects = TestBed.inject<SnackBarEffects>(SnackBarEffects);
   });
 
   it('should be created', () => {
